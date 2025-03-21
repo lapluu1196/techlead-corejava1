@@ -18,7 +18,6 @@ public class InputUtil {
         return n;
     }
 
-
     public static int[] inputListOfNumber(Scanner sc) {
         int n = inputNumberOfElement(sc);
 
@@ -47,5 +46,33 @@ public class InputUtil {
         }
 
         return strings;
+    }
+
+    public static int validateIntegerInput(Scanner sc) {
+        int n = 0;
+        while (true) {
+            try {
+                n = Integer.parseInt(sc.nextLine());
+                if (n > 1) break;
+                else System.out.println("The number of elements must be at least 2.");
+            } catch (Exception e) {
+                System.out.println("Please enter a valid number.");
+            }
+        }
+        return n;
+    }
+
+    public static double validateDoubleInput(Scanner sc) {
+        double n = 0;
+        while (true) {
+            try {
+                n = Double.parseDouble(sc.nextLine());
+                if (n > 0) break;
+                else System.out.println("The number must be > 0.");
+            } catch (Exception e) {
+                System.out.println("Please enter a valid number.");
+            }
+        }
+        return n;
     }
 }
