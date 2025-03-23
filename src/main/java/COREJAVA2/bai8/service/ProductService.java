@@ -22,7 +22,7 @@ public class ProductService {
         System.out.print("Enter price: ");
         double price = InputUtil.validateDoubleInput(sc);
         System.out.print("Enter quantity: ");
-        int quantity = InputUtil.validateIntegerInput(sc);
+        int quantity = InputUtil.validatePositiveIntegerInput(sc);
         Product product = new Product(code, name, price, quantity);
 
         productMap.put(code, product);

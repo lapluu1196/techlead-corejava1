@@ -48,13 +48,13 @@ public class InputUtil {
         return strings;
     }
 
-    public static int validateIntegerInput(Scanner sc) {
+    public static int validatePositiveIntegerInput(Scanner sc) {
         int n = 0;
         while (true) {
             try {
                 n = Integer.parseInt(sc.nextLine());
-                if (n > 1) break;
-                else System.out.println("The number of elements must be at least 2.");
+                if (n > 0) break;
+                else System.out.println("The number of elements must be at least 1.");
             } catch (Exception e) {
                 System.out.println("Please enter a valid number.");
             }

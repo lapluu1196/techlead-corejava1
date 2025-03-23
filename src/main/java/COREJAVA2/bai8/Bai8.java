@@ -50,7 +50,7 @@ public class Bai8 {
                     String codeFind = sc.nextLine();
                     Product product = ProductService.findByCode(productMap, codeFind);
                     if (product != null) {
-                        ProductService.display(product);
+                        System.out.println(ProductService.display(product));
                     } else {
                         System.out.println("Product not found!");
                     }
